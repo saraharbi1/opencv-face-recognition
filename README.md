@@ -9,29 +9,35 @@
 - Pillow: `pip install pillow`
 
 خطوات التشغيل
-جمع بيانات الوجوه: python create_dataset.py
+جمع بيانات الوجه:
 
-تدريب النموذج: python train_model.py
 
-التعرف على الوجوه: python recognizer.py
+python create_dataset.py
+تدريب النموذج:
 
-نصائح للاستخدام
-أثناء جمع البيانات:
 
-تأكد من إضاءة جيدة
+python train_model.py
+تشغيل نظام التعرف:
 
-غير زوايا وجهك لتحسين الدقة
+bash
+python recognizer.py
+استكشاف الأخطاء الإضافية
+تثبيت إصدار أقدم من OpenCV:
 
-اجمع 100 صورة على الأقل لكل شخص
 
-لتحسين الدقة:
+pip uninstall opencv-contrib-python -y
+pip install opencv-contrib-python==4.5.5.64
+استخدام بيئة افتراضية جديدة:
 
-أضف المزيد من الأشخاص بتشغيل create_dataset.py بأرقام معرفات جديدة
 
-عدّل ملف recognizer.py وأضف الأسماء في قاموس names
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+تحديث حزمة setuptools:
 
-في حال مشاكل الكاميرا:
+bash
+pip install --upgrade setuptools
+إعادة تشغيل جهازك بعد التثبيت.
 
-جرب تغيير VideoCapture(0) إلى VideoCapture(1)
+هذه التعديلات تضمن أن المشروع سيعمل بشكل صحيح على كاميرا اللابتوب 
 
-تأكد من عدم استخدام الكاميرا من برامج أخرى

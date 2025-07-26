@@ -8,14 +8,30 @@
 - NumPy: `pip install numpy`
 - Pillow: `pip install pillow`
 
-## خطوات التشغيل
+خطوات التشغيل
+جمع بيانات الوجوه: python create_dataset.py
 
-1. **جمع بيانات الوجوه**:
-   ```bash
-   python create_dataset.py
-   
-## الخطوة 4: اختبار المشروع
+تدريب النموذج: python train_model.py
 
-### 4.1 اختبار جمع البيانات
-```bash
-python create_dataset.py
+التعرف على الوجوه: python recognizer.py
+
+نصائح للاستخدام
+أثناء جمع البيانات:
+
+تأكد من إضاءة جيدة
+
+غير زوايا وجهك لتحسين الدقة
+
+اجمع 100 صورة على الأقل لكل شخص
+
+لتحسين الدقة:
+
+أضف المزيد من الأشخاص بتشغيل create_dataset.py بأرقام معرفات جديدة
+
+عدّل ملف recognizer.py وأضف الأسماء في قاموس names
+
+في حال مشاكل الكاميرا:
+
+جرب تغيير VideoCapture(0) إلى VideoCapture(1)
+
+تأكد من عدم استخدام الكاميرا من برامج أخرى

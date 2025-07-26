@@ -13,3 +13,9 @@
 1. **جمع بيانات الوجوه**:
    ```bash
    python create_dataset.py
+   
+## الخطوة 4: اختبار المشروع
+
+### 4.1 اختبار جمع البيانات
+```bash
+python create_dataset.py
